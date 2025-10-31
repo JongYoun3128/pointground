@@ -377,18 +377,19 @@ body {
     transform: translateY(-10px);
 }
 .category-text h5 {
-    width: fit-content;
+    width: 200px;
     margin: 20px auto;
     padding: 10px;
     border-radius: 20px;
     background-color: #f8f8f800;
     color: #ffffff;
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
     transition: all 0.3s ease-out;
     font-family: "Quattrocento Sans", sans-serif;
 }
 .category-text h5 .font {
     font-family: "Questrial", sans-serif;
+    font-size: 14px;
 }
 .category-text p {
     font-size: 30px;
@@ -731,7 +732,9 @@ body {
     .mobile-menu-btn {
         display: none;
     }
-
+    .business {
+        padding-top: 10px;
+    }
     .hero-title {
         font-size: 36px;
     }
@@ -759,7 +762,7 @@ body {
         gap: 10px;
     }
     .category-text p {
-        font-size: 14px;
+        font-size: 10px;
     }
     .main-title {
         font-size: 50px;
@@ -780,10 +783,15 @@ body {
         border-radius: 20px;
     }
     .category-text h5 {
-        padding: 5px 6px;
+        width: 140px;
+        font-size: 14px;
+        padding: 5px 3px;
     }
     .stats h2 {
         font-size: 25px;
+    }
+    .category-text h5 .font {
+        font-size: 10px;
     }
 }
 
