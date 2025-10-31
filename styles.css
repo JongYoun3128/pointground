@@ -23,6 +23,9 @@ a {
     text-decoration: none;
     color: inherit;
 }
+li {
+    list-style: none;
+}
 body {
     font-family: "Noto Sans KR", sans-serif;
     line-height: 1.6;
@@ -380,7 +383,7 @@ body {
     border-radius: 20px;
     background-color: #f8f8f800;
     color: #ffffff;
-    border: 1px solid #0c1526;
+    border: 2px solid #ffffff;
     transition: all 0.3s ease-out;
     font-family: "Quattrocento Sans", sans-serif;
 }
