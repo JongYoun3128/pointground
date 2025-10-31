@@ -72,6 +72,37 @@ sections.forEach((section) => {
     observer.observe(section);
 });
 
+// Business 섹션 카테고리 아이템 슬라이드 애니메이션
+const categoryObserverOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px",
+};
+
+const categoryObserver = new IntersectionObserver(function (entries) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            const index = Array.from(entry.target.parentNode.children).indexOf(
+                entry.target
+            );
+
+            // 짝수 인덱스는 왼쪽에서, 홀수 인덱스는 오른쪽에서
+            if (index % 2 === 0) {
+                entry.target.classList.add("slide-in-left");
+            } else {
+                entry.target.classList.add("slide-in-right");
+            }
+
+            categoryObserver.unobserve(entry.target);
+        }
+    });
+}, categoryObserverOptions);
+
+// 비즈니스 섹션의 카테고리 아이템들 관찰
+const categoryItems = document.querySelectorAll(".category-item");
+categoryItems.forEach((item) => {
+    categoryObserver.observe(item);
+});
+
 // 비즈니스 카드 클릭 이벤트
 document.querySelectorAll(".business-card").forEach((card) => {
     card.addEventListener("click", function () {
