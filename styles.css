@@ -378,14 +378,14 @@ body {
     margin: 20px auto;
     padding: 10px;
     border-radius: 20px;
-    background-color: #f8f8f8;
-    color: #242f42;
+    background-color: #f8f8f800;
+    color: #ffffff;
+    border: 1px solid #0c1526;
     transition: all 0.3s ease-out;
     font-family: "Quattrocento Sans", sans-serif;
 }
 .category-text h5 .font {
     font-family: "Questrial", sans-serif;
-    font-size: 10px;
 }
 .category-text p {
     font-size: 30px;
