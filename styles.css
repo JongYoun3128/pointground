@@ -286,9 +286,31 @@ body {
 .main-text {
     width: 100%;
     margin: 120px 0;
+    box-sizing: border-box;
+    position: relative;
 }
 .main-text img {
     width: 100%;
+}
+.main-text p {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.small-text {
+    display: none;
+}
+.yellow {
+    font-weight: bold;
+    color: #996515;
+}
+.font-bold {
+    font-weight: bold;
 }
 /* 비즈니스 섹션 */
 .business {
@@ -718,6 +740,9 @@ body {
     .section-header h2 {
         font-size: 36px;
     }
+    .main-text p {
+        font-size: 17px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -741,9 +766,6 @@ body {
 
     .hero-description {
         font-size: 16px;
-    }
-    .main-text {
-        margin: 60px 0;
     }
     .business-grid,
     .tech-content,
@@ -792,6 +814,15 @@ body {
     }
     .category-text h5 .font {
         font-size: 10px;
+    }
+    .main-text p {
+        font-size: 13px;
+    }
+    .big-text {
+        display: none;
+    }
+    .small-text {
+        display: block;
     }
 }
 
