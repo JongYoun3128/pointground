@@ -797,7 +797,7 @@ body {
         justify-content: center;
     }
     .category-text p {
-        font-size: 10px;
+        font-size: 14px;
     }
     .main-title {
         font-size: 50px;
@@ -814,13 +814,13 @@ body {
         margin-bottom: 60px;
     }
     .category-image {
-        width: 70%;
+        width: 100%;
     }
     .category-text {
         width: 100%;
     }
     .category-image img {
-        width: 100%;
+        width: 80%;
         border-radius: 20px;
     }
     .category-text h5 {
