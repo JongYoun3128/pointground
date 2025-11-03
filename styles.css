@@ -395,6 +395,9 @@ body {
 .category-text a {
     display: block;
 }
+.hide2 {
+    display: none;
+}
 .category-text a :hover {
     transform: translateY(-10px);
 }
@@ -463,8 +466,7 @@ body {
 
 /* 통계 섹션 */
 .stats {
-    background: linear-gradient(135deg, #0c1526 0%, #2c3e50 100%);
-    color: white;
+    color: #0c1526;
     padding: 80px 0;
     margin-bottom: 100px;
 }
@@ -783,8 +785,19 @@ body {
         flex-direction: column;
         gap: 10px;
     }
+    .hide1 {
+        display: none;
+    }
+
+    .hide2 {
+        display: block;
+    }
+    .category-item {
+        flex-direction: column;
+        justify-content: center;
+    }
     .category-text p {
-        font-size: 8px;
+        font-size: 16px;
     }
     .main-title {
         font-size: 50px;
@@ -799,6 +812,12 @@ body {
         font-size: 20px;
         color: #a0aab5;
         margin-bottom: 60px;
+    }
+    .category-image {
+        width: 100%;
+    }
+    .category-text {
+        width: 100%;
     }
     .category-image img {
         width: 100%;
