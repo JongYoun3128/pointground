@@ -164,9 +164,6 @@ function updateScrollProgress() {
     const scrollTotal =
         document.documentElement.scrollHeight - window.innerHeight;
     const scrollProgress = (window.pageYOffset / scrollTotal) * 100;
-
-    // 필요시 진행률 바 추가 가능
-    console.log("Scroll progress:", scrollProgress + "%");
 }
 
 window.addEventListener("scroll", updateScrollProgress);
