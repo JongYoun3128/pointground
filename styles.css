@@ -499,6 +499,345 @@ body {
     line-height: 1.6;
 }
 
+/* 성장 구조 섹션 */
+.growth-structure {
+    background: #ffffff;
+    padding: 100px 0;
+    color: #0c1526;
+}
+
+.growth-structure .section-title {
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.growth-structure .section-subtitle {
+    text-align: center;
+    font-size: 20px;
+    color: #7f8c8d;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.growth-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.growth-step {
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 220px;
+    max-width: 280px;
+    max-height: 260px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.growth-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(153, 101, 21, 0.15);
+    border-color: #996515;
+}
+
+.step-number {
+    font-size: 14px;
+    font-weight: 700;
+    color: #996515;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.step-icon {
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0c1526;
+    margin-bottom: 5px;
+}
+
+.step-tag {
+    font-size: 14px;
+    color: #996515;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.step-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.step-list li {
+    font-size: 15px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.step-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #996515;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.growth-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.growth-summary {
+    text-align: center;
+    font-size: 20px;
+    color: #0c1526;
+    font-weight: 600;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
+    border-radius: 15px;
+    border: 2px solid #996515;
+}
+
+/* 리워드 메커니즘 섹션 */
+.reward-mechanism {
+    background: #f8f9fa;
+    padding: 100px 0;
+    color: #0c1526;
+}
+
+.reward-mechanism .section-title {
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.reward-mechanism .section-subtitle {
+    text-align: center;
+    font-size: 20px;
+    color: #7f8c8d;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reward-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.reward-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.visual-item {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+.visual-item2 {
+    display: none;
+}
+.visual-label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0c1526;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.group-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.user-icon {
+    transition: transform 0.3s ease;
+}
+
+.user-icon:hover {
+    transform: scale(1.1);
+}
+
+.progress-container {
+    margin-bottom: 15px;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #996515;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background: #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #996515 0%, #f4b942 100%);
+    border-radius: 15px;
+    width: 100%;
+    position: relative;
+    animation: progressAnimation 2s ease-in-out;
+}
+
+@keyframes progressAnimation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.loop-diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.loop-item {
+    flex-shrink: 0;
+}
+
+.loop-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #996515 0%, #f4b942 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+    box-shadow: 0 5px 15px rgba(153, 101, 21, 0.3);
+}
+
+.loop-arrow {
+    font-size: 28px;
+    color: #996515;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.loop-arrow-back {
+    position: absolute;
+    bottom: -50px;
+    font-size: 36px;
+}
+
+.visual-desc {
+    text-align: center;
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 15px;
+}
+
+.reward-description {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.reward-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.reward-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #2c3e50;
+}
+
+.reward-list .bullet {
+    color: #996515;
+    font-weight: bold;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.reward-example {
+    background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
+    border-radius: 15px;
+    padding: 25px;
+    border-left: 4px solid #996515;
+}
+
+.reward-example h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0c1526;
+    margin-bottom: 15px;
+}
+
+.reward-example p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #2c3e50;
+    margin: 0;
+}
+
 /* 통계 섹션 */
 .stats {
     color: #0c1526;
@@ -949,6 +1288,112 @@ body {
         display: none;
     }
     .small-text {
+        display: block;
+    }
+
+    /* 성장 구조 모바일 */
+    .growth-structure {
+        padding: 60px 0;
+    }
+
+    .growth-structure .section-title {
+        font-size: 32px;
+    }
+
+    .growth-structure .section-subtitle {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .growth-steps {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .growth-arrow {
+        transform: rotate(90deg);
+    }
+
+    .growth-summary {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    /* 리워드 메커니즘 모바일 */
+    .reward-mechanism {
+        padding: 60px 0;
+    }
+
+    .reward-mechanism .section-title {
+        font-size: 32px;
+    }
+
+    .reward-mechanism .section-subtitle {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .reward-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .visual-item {
+        padding: 20px;
+    }
+
+    .visual-label {
+        font-size: 16px;
+    }
+
+    .group-icons {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .user-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .loop-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 12px;
+    }
+
+    .loop-arrow {
+        font-size: 24px;
+    }
+
+    .loop-arrow-back {
+        bottom: -40px;
+        font-size: 30px;
+    }
+
+    .reward-description {
+        padding: 25px;
+    }
+
+    .reward-list li {
+        font-size: 14px;
+    }
+
+    .reward-example {
+        padding: 20px;
+    }
+
+    .reward-example h4 {
+        font-size: 16px;
+    }
+
+    .reward-example p {
+        font-size: 14px;
+    }
+    .loop-diagram {
+        gap: 5px;
+    }
+    .visual-item2 {
         display: block;
     }
 }

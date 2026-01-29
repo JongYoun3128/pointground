@@ -8,15 +8,18 @@ window.addEventListener("scroll", function () {
     }
 });
 
-// 부드러운 스크롤
+// 부드러운 스크롤 (헤더 오프셋 적용)
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute("href"));
         if (target) {
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
+            const headerHeight = document.querySelector(".header").offsetHeight;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth"
             });
         }
     });
@@ -298,5 +301,49 @@ function initCategorySliders() {
 
 // 페이지 로드 시 슬라이더 초기화
 document.addEventListener("DOMContentLoaded", initCategorySliders);
+
+// 성장 구조 섹션 애니메이션
+const growthSteps = document.querySelectorAll(".growth-step");
+const growthObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }, index * 150);
+                growthObserver.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.2 }
+);
+
+growthSteps.forEach((step) => {
+    step.style.opacity = "0";
+    step.style.transform = "translateY(30px)";
+    step.style.transition = "all 0.6s ease";
+    growthObserver.observe(step);
+});
+
+// 리워드 메커니즘 진행바 애니메이션
+const rewardMechanismSection = document.querySelector(".reward-mechanism");
+if (rewardMechanismSection) {
+    const rewardObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const progressBar = entry.target.querySelector(".progress-fill");
+                    if (progressBar) {
+                        progressBar.style.animation = "progressAnimation 2s ease-in-out forwards";
+                    }
+                    rewardObserver.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.3 }
+    );
+    rewardObserver.observe(rewardMechanismSection);
+}
 
 console.log("POINTGROUD 홈페이지가 로드되었습니다.");
