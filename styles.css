@@ -881,7 +881,7 @@ body {
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
+    gap: 20px;
 }
 
 .stat-item {
@@ -1314,6 +1314,9 @@ body {
     }
     .stats h2 {
         font-size: 25px;
+    }
+    .stat-number {
+        font-size: 20px;
     }
     .category-text h5 .font {
         font-size: 10px;
