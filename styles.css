@@ -1210,7 +1210,9 @@ body {
     .header .head-container {
         justify-content: center;
     }
-
+    .hero {
+        margin-bottom: 130px;
+    }
     .header-buttons {
         display: none;
     }
@@ -1224,7 +1226,7 @@ body {
         aspect-ratio: 16/9;
     }
     .banner {
-        margin-bottom: 130px;
+        margin-bottom: 50px;
         margin-top: 0px;
     }
     .banner2 {
