@@ -278,7 +278,6 @@ body {
 
 .section-header p {
     font-size: 18px;
-    color: var(--text-light);
     max-width: 600px;
     margin: 0 auto;
 }
@@ -1048,8 +1047,9 @@ body {
 
 /* 문의 섹션 */
 .contact {
-    background: #f8f9fa;
+    background: var(--dark-bg);
     padding: 100px 0;
+    color: #fff;
 }
 
 .contact-info {
@@ -1065,13 +1065,13 @@ body {
 }
 
 .contact-item p {
-    color: var(--text-light);
+    color: #fff;
     margin-bottom: 10px;
     font-size: 16px;
 }
 
 .contact-item a {
-    color: var(--primary-color);
+    color: #fff;
     text-decoration: none;
     font-weight: 600;
 }
@@ -1136,7 +1136,6 @@ body {
     height: 35px;
     width: auto;
     object-fit: contain;
-    filter: brightness(0) invert(1);
 }
 
 .footer-links {
