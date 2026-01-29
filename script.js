@@ -82,7 +82,7 @@ const categoryObserver = new IntersectionObserver(function (entries) {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             const index = Array.from(entry.target.parentNode.children).indexOf(
-                entry.target
+                entry.target,
             );
 
             // 짝수 인덱스는 왼쪽에서, 홀수 인덱스는 오른쪽에서
@@ -233,7 +233,7 @@ const timelineObserver = new IntersectionObserver(
             }
         });
     },
-    { threshold: 0.1 }
+    { threshold: 0.1 },
 );
 
 document.querySelectorAll(".timeline-item").forEach((item) => {
@@ -278,5 +278,25 @@ window.addEventListener("beforeunload", function () {
     // 필요한 정리 작업
     console.log("페이지를 떠납니다.");
 });
+
+// 카테고리 이미지 슬라이더
+function initCategorySliders() {
+    const sliders = document.querySelectorAll(".image-slider");
+
+    sliders.forEach((slider) => {
+        const images = slider.querySelectorAll(".slider-img");
+        let currentIndex = 0;
+
+        // 3초마다 이미지 전환
+        setInterval(() => {
+            images[currentIndex].classList.remove("active");
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add("active");
+        }, 2000);
+    });
+}
+
+// 페이지 로드 시 슬라이더 초기화
+document.addEventListener("DOMContentLoaded", initCategorySliders);
 
 console.log("POINTGROUD 홈페이지가 로드되었습니다.");
