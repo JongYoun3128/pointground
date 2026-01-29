@@ -15,11 +15,15 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         const target = document.querySelector(this.getAttribute("href"));
         if (target) {
             const headerHeight = document.querySelector(".header").offsetHeight;
-            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
-            
+            const targetPosition =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerHeight -
+                20;
+
             window.scrollTo({
                 top: targetPosition,
-                behavior: "smooth"
+                behavior: "smooth",
             });
         }
     });
@@ -302,6 +306,24 @@ function initCategorySliders() {
 // 페이지 로드 시 슬라이더 초기화
 document.addEventListener("DOMContentLoaded", initCategorySliders);
 
+// Company 슬라이더 초기화
+function initCompanySlider() {
+    const slides = document.querySelectorAll(".company-slide");
+    let currentIndex = 0;
+
+    if (slides.length === 0) return;
+
+    // 3초마다 이미지 전환
+    setInterval(() => {
+        slides[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add("active");
+    }, 1500);
+}
+
+// 페이지 로드 시 Company 슬라이더 초기화
+document.addEventListener("DOMContentLoaded", initCompanySlider);
+
 // 성장 구조 섹션 애니메이션
 const growthSteps = document.querySelectorAll(".growth-step");
 const growthObserver = new IntersectionObserver(
@@ -316,7 +338,7 @@ const growthObserver = new IntersectionObserver(
             }
         });
     },
-    { threshold: 0.2 }
+    { threshold: 0.2 },
 );
 
 growthSteps.forEach((step) => {
@@ -333,15 +355,17 @@ if (rewardMechanismSection) {
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    const progressBar = entry.target.querySelector(".progress-fill");
+                    const progressBar =
+                        entry.target.querySelector(".progress-fill");
                     if (progressBar) {
-                        progressBar.style.animation = "progressAnimation 2s ease-in-out forwards";
+                        progressBar.style.animation =
+                            "progressAnimation 2s ease-in-out forwards";
                     }
                     rewardObserver.unobserve(entry.target);
                 }
             });
         },
-        { threshold: 0.3 }
+        { threshold: 0.3 },
     );
     rewardObserver.observe(rewardMechanismSection);
 }
