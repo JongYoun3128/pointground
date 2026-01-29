@@ -292,7 +292,7 @@ function initCategorySliders() {
             images[currentIndex].classList.remove("active");
             currentIndex = (currentIndex + 1) % images.length;
             images[currentIndex].classList.add("active");
-        }, 2000);
+        }, 1500);
     });
 }
 
