@@ -31,6 +31,10 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .container {
