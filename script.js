@@ -306,24 +306,6 @@ function initCategorySliders() {
 // 페이지 로드 시 슬라이더 초기화
 document.addEventListener("DOMContentLoaded", initCategorySliders);
 
-// Company 슬라이더 초기화
-function initCompanySlider() {
-    const slides = document.querySelectorAll(".company-slide");
-    let currentIndex = 0;
-
-    if (slides.length === 0) return;
-
-    // 3초마다 이미지 전환
-    setInterval(() => {
-        slides[currentIndex].classList.remove("active");
-        currentIndex = (currentIndex + 1) % slides.length;
-        slides[currentIndex].classList.add("active");
-    }, 1500);
-}
-
-// 페이지 로드 시 Company 슬라이더 초기화
-document.addEventListener("DOMContentLoaded", initCompanySlider);
-
 // 성장 구조 섹션 애니메이션
 const growthSteps = document.querySelectorAll(".growth-step");
 const growthObserver = new IntersectionObserver(
